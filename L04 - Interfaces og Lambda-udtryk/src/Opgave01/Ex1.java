@@ -45,9 +45,9 @@ public class Ex1 {
 //      Alle personer der har et navn med længden 5
         System.out.println(findAll(persons,
                 p -> p.getName().length() == 5));
-//      Alle med et navn med længden mindst 5 og alder under 40
+//      Alle med et navn med længden mindst 6 og alder under 40
         System.out.println(findAll(persons,
-                p -> p.getName().length() >= 5 && p.getAge() < 40));
+                p -> p.getName().length() >= 6 && p.getAge() < 40));
 	}
 
 	/**
