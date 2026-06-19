@@ -14,6 +14,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 import bryghus.Produkt;
 import bryghus.Salg;
 import queue.CircularArrayQueue;
+import queue.NodeQueue;
 import queue.QueueI;
 
 @TestMethodOrder(OrderAnnotation.class)
@@ -35,7 +36,8 @@ class QueueTest
         // ARRANGE
         // --------------------------------------------------
 
-        this.queue = new CircularArrayQueue(5);
+//        this.queue = new CircularArrayQueue(5);
+        this.queue = new NodeQueue();
 
         Produkt kloster = new Produkt("Klosterbryg");
         Produkt sweet = new Produkt("Sweet Georgia Brown");
