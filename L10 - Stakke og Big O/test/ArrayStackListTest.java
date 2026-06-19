@@ -27,7 +27,7 @@ class ArrayStackListTest
         // ARRANGE
         // --------------------------------------------------
 
-        this.stack = new NodeStack();
+        this.stack = new ArrayListStack();
 
         this.card1 = new Card("Spade", "Jack");
         this.card2 = new Card("Club", "2");

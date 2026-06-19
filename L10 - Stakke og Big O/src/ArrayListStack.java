@@ -11,7 +11,10 @@ public class ArrayListStack implements StackI{
 
     @Override
     public Object pop() {
-        return elements.getFirst();
+        Object temp = elements.getFirst();
+        elements.removeFirst();
+
+        return temp;
     }
 
     @Override
