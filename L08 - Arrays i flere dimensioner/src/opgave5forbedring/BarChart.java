@@ -1,22 +1,27 @@
-package opgave4barchart;
+package opgave5forbedring;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BarChart {
-    private ArrayList<Integer> list = new ArrayList<>();
+    private ArrayList<String> listString = new ArrayList<>();
+    private ArrayList<Integer> listInteger = new ArrayList<>();
 
     public ArrayList<Integer> readValues() {
-        System.out.println("Indtast nogle positive tal.  " + "Indtast et negativt tal for at afslutte: ");
+        System.out.println("Indtast nogle positive tal. Og en overskrift før hver tal. "
+                + "Indtast et negativt tal for at afslutte: ");
 
         Scanner in = new Scanner(System.in);
 
+        String overskrift = in.next();
         int n = in.nextInt();
         while (n >= 0) {
-            list.add(n);
+            listString.add(overskrift);
+            listInteger.add(n);
+            overskrift = in.next();
             n = in.nextInt();
         }
-        return list;
+        return listInteger;
     }
 
     /**
@@ -40,10 +45,14 @@ public class BarChart {
      * Prints out a BarChart of the values using the System.out.println method.
      */
     public void printBarChart() {
-        int max = findMax(this.list);
+        int max = findMax(this.listInteger);
+
         // TODO: print out bar chart
-        for (Integer i : list) {
-            double relativStørrelse = (double) i / max;
+        for (int i = 0; i < listInteger.size(); i++) {
+            double relativStørrelse = (double) listInteger.get(i) / max;
+
+            System.out.print(listString.get(i) + "   ");
+
             for (int index = 0; index < 40 * relativStørrelse; index++) {
                 System.out.print("*");
             }

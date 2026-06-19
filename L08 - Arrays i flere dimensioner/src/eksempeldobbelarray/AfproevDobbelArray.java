@@ -9,10 +9,18 @@ public class AfproevDobbelArray {
 	public static void main(String[] args) {
 		
 		// Kan oprettes med opremsning
-		int[][] array1 = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
+		int[][] array1 = {
+                            { 1, 2, 3, 4 },
+                            { 5, 6, 7, 8 },
+                            { 9, 10, 11, 12 }
+                        };
 
 		// Ved opremsning behøver de ikke være lige lange
-		int[][] array2 = { { 1, 2 }, { 0, 3 }, { 4, 5, 6 } };
+		int[][] array2 = {
+                            { 1, 2 },
+                            { 0, 3 },
+                            { 4, 5, 6 }
+                        };
 
 		DobbelArray da = new DobbelArray();
 
@@ -56,7 +64,8 @@ public class AfproevDobbelArray {
 
 		for (int i = 0; i < array4.length; i++) {
 			for (int j = 0; j < array4[i].length; j++) {
-				array4[i][i] = 1;
+				array4[i][j] = 2;
+                array4[i][i] = 1;
 			}
 		}
 		System.out.println();

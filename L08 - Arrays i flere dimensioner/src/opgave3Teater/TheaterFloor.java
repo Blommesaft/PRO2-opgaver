@@ -66,7 +66,7 @@ public class TheaterFloor {
 
 	public void printTheaterFloor() {
 		// TODO
-		System.out.println("   Sæde : 1   2   3   4   5   6   7   8   9   10");
+		System.out.println("   Sæde : 0   1   2   3   4   5   6   7   8   9   ");
 		System.out.println("          --------------------------------------");
 		for (int row = 0; row < seats.length; row++) {
 			System.out.print("Række " + row + " : ");
