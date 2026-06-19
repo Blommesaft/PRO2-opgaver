@@ -7,16 +7,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BilForsikringTest {
 
-//    private BilForsikring bilForsikring;
-//
-//    private int alder;
-//    private boolean isKvinde;
-//    private int skadeFrieaer;
-//
-//    @BeforeEach
-//    void setUp() {
-//        bilForsikring = new BilForsikring();
-//    }
+    private BilForsikring bilForsikring;
+
+    private int alder;
+    private boolean isKvinde;
+    private int skadeFrieaer;
+
+    @BeforeEach
+    void setUp() {
+        bilForsikring = new BilForsikring();
+    }
 
     @Test
     void test_beregnPraemie_under_18() {
@@ -62,47 +62,25 @@ class BilForsikringTest {
 
     }
 
-//    @Test
-//    void test_beregnPraemie_negativ_skadefri() {
-//
-//        // Arrange
-//        BilForsikring bilForsikring = new BilForsikring();
-//        int alder = 18;
-//        boolean isKvinde = false;
-//        int skadeFrieaer = -1;
-//        bilForsikring.setGrundpaemie(50);
-//
-//
-//        // Act
-//        Exception actual = assertThrows(RuntimeException.class,() ->
-//                bilForsikring.beregnPraemie(alder, isKvinde, skadeFrieaer));
-//
-//
-//        // Assert
-//        String expected = "Antal skade frie aer skal vaere positiv";
-//        assertEquals(expected, actual.getMessage());
-//
-//    }
-//
-//    @Test
-//    void test_beregnPraemie_negativ_skadefri() {
-//
-//        // Arrange
-//        BilForsikring bilForsikring = new BilForsikring();
-//        int alder = 18;
-//        boolean isKvinde = false;
-//        int skadeFrieaer = -1;
-//        bilForsikring.setGrundpaemie(50);
-//
-//
-//        // Act
-//        Exception actual = assertThrows(RuntimeException.class,() ->
-//                bilForsikring.beregnPraemie(alder, isKvinde, skadeFrieaer));
-//
-//
-//        // Assert
-//        String expected = "Antal skade frie aer skal vaere positiv";
-//        assertEquals(expected, actual.getMessage());
-//
-//    }
+    @Test
+    void test_beregnPraemie_negativ_skadefri() {
+
+        // Arrange
+        BilForsikring bilForsikring = new BilForsikring();
+        int alder = 18;
+        boolean isKvinde = false;
+        int skadeFrieaer = -1;
+        bilForsikring.setGrundpaemie(50);
+
+
+        // Act
+        Exception actual = assertThrows(RuntimeException.class,() ->
+                bilForsikring.beregnPraemie(alder, isKvinde, skadeFrieaer));
+
+
+        // Assert
+        String expected = "Antal skade frie aer skal vaere positiv";
+        assertEquals(expected, actual.getMessage());
+
+    }
 }

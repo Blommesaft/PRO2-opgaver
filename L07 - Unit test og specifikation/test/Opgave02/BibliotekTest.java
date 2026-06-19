@@ -1,5 +1,6 @@
 package Opgave02;
 
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -10,6 +11,7 @@ class BibliotekTest {
 
 
     @Test
+    @Order(1)
     void test_beregnBøde_0Dage_Barn() {
 
         // Arrange
@@ -27,6 +29,7 @@ class BibliotekTest {
     }
 
     @Test
+    @Order(2)
     void test_beregnBøde_0Dage_Voksen() {
 
         // Arrange
@@ -44,6 +47,7 @@ class BibliotekTest {
     }
 
     @Test
+    @Order(3)
     void test_beregnBøde_1Dag_Barn() {
 
         // Arrange
@@ -61,6 +65,7 @@ class BibliotekTest {
     }
 
     @Test
+    @Order(4)
     void test_beregnBøde_1Dag_Voksen() {
 
         // Arrange
@@ -78,6 +83,7 @@ class BibliotekTest {
     }
 
     @Test
+    @Order(5)
     void test_beregnBøde_7Dage_Barn() {
 
         // Arrange
@@ -95,6 +101,7 @@ class BibliotekTest {
     }
 
     @Test
+    @Order(6)
     void test_beregnBøde_7Dage_Voksen() {
 
         // Arrange
@@ -112,6 +119,7 @@ class BibliotekTest {
     }
 
     @Test
+    @Order(7)
     void test_beregnBøde_8Dage_Barn() {
 
         // Arrange
@@ -129,6 +137,7 @@ class BibliotekTest {
     }
 
     @Test
+    @Order(8)
     void test_beregnBøde_8Dage_Voksen() {
 
         // Arrange
