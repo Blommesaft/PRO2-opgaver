@@ -1,8 +1,4 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -13,6 +9,10 @@ import org.junit.jupiter.api.TestMethodOrder;
 
 import queue.Queue;
 import snacks.Limb;
+import snackssupply.SnackBar;
+import snackssupply.SnackFactory;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(OrderAnnotation.class)
 class QueueTest {
@@ -151,5 +151,39 @@ class QueueTest {
 
         queue.dequeue();
         assertTrue(queue.isEmpty());
+    }
+
+    @Test
+    @Order(4)
+    void test_sortSnacksSortererLimbs()
+    {
+        ArrayList<Limb> limbs = new ArrayList<>();
+
+        limbs.add(new Limb(Limb.Types.Toe));
+        limbs.add(new Limb(Limb.Types.Finger));
+        limbs.add(new Limb(Limb.Types.Knee));
+
+        SnackBar.sortSnacks(limbs);
+
+        assertEquals(Limb.Types.Finger, limbs.get(0).getType());
+        assertEquals(Limb.Types.Knee, limbs.get(1).getType());
+        assertEquals(Limb.Types.Toe, limbs.get(2).getType());
+    }
+
+    @Test
+    @Order(5)
+    void test_getNewSnacksFylderContainer()
+    {
+        Limb[] limbs = new Limb[20];
+
+
+        SnackFactory.getNewSnacks(limbs, Limb::new);
+        SnackFactory.getNewSnacks(limbs);
+
+
+        for (Limb limb : limbs)
+        {
+            assertNotNull(limb);
+        }
     }
 }

@@ -7,8 +7,7 @@ import snacks.Snack;
 /**
  * An implementation of a queue as a circular array.
  */
-public class Queue<T>
-{
+public class Queue<T> {
     private T[] elements;
     private int currentSize;
     private int head;
