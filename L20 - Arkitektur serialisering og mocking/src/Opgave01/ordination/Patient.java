@@ -1,8 +1,9 @@
 package Opgave01.ordination;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Patient {
+public class Patient implements Serializable {
     private String cprnr;
     private String navn;
     private double vaegt;
