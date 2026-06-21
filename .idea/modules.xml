@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/L01 - Nedarvning og polymorfi 1/L01 - Nedarvning og polymorfi 1.iml" filepath="$PROJECT_DIR$/L01 - Nedarvning og polymorfi 1/L01 - Nedarvning og polymorfi 1.iml" />
       <module fileurl="file://$PROJECT_DIR$/L03 - Interfaces og Comparable/L03 - Interfaces og Comparable.iml" filepath="$PROJECT_DIR$/L03 - Interfaces og Comparable/L03 - Interfaces og Comparable.iml" />
       <module fileurl="file://$PROJECT_DIR$/L04 - Interfaces og Lambda-udtryk/L04 - Interfaces og Lambda-udtryk.iml" filepath="$PROJECT_DIR$/L04 - Interfaces og Lambda-udtryk/L04 - Interfaces og Lambda-udtryk.iml" />
       <module fileurl="file://$PROJECT_DIR$/L05 - Java Collections Framework/L05 - Java Collections Framework.iml" filepath="$PROJECT_DIR$/L05 - Java Collections Framework/L05 - Java Collections Framework.iml" />
