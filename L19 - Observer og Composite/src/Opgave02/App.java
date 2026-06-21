@@ -18,7 +18,26 @@ public class App {
         tegning.tilføjFigur(ellipse1);
         tegning.tilføjFigur(ellipse2);
 
+
         tegning.tegn();
         System.out.println(tegning.getAreal());
+
+
+        Tegning tegning1 = new Tegning("TegningDerHolderTegning");
+
+        Ellipse ellipse3 = new Ellipse("Elli3", 3, 4);
+        Ellipse ellipse4 = new Ellipse("Elli4", 7, 6);
+
+        tegning1.tilføjFigur(ellipse3);
+        tegning1.tilføjFigur(ellipse4);
+
+        tegning1.tegn();
+        System.out.println(tegning1.getAreal());
+
+        tegning1.tilføjFigur(tegning);
+
+        tegning1.tegn();
+        System.out.println(tegning1.getAreal());
+
     }
 }

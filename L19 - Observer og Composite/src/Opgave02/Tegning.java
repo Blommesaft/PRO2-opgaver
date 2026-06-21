@@ -25,7 +25,8 @@ public class Tegning extends Figur{
     @Override
     public void tegn() {
         for (Figur f : figurer) {
-            System.out.println(f.getNavn());
+            // I stedet for at printe navnet direkte her, lader vi figuren selv bestemme, hvordan den tegnes
+            f.tegn();
         }
     }
 
