@@ -7,6 +7,20 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class FilmKarakterer {
+    /** Sådan virker koden:
+     To Maps: Vi bruger ét map til at tælle antallet af anmeldelser pr. film (filmAntal) og ét map til at holde styr på den samlede sum af karakterer pr. film (filmSum).
+
+     Løkke (Loop): Først læses det samlede antal anmeldelser (første linje). Derefter kører en løkke, som læser filmens navn og karakter parvis.
+
+     Beregning og Output: Til sidst løber vi listen af film igennem, beregner gennemsnittet og udskriver resultatet i det ønskede format.
+
+     Tips til afvikling:
+     Husk at oprette en fil kaldet film.txt i samme mappe som dit program (eller angiv den fulde sti til filen).
+
+     Metoden getOrDefault(key, defaultValue) er genial her: Hvis filmen ikke findes i mappet endnu, starter den på 0. Hvis den findes, tager den den nuværende værdi og lægger 1 (eller karakteren) til.
+     *
+     *
+     */
 
     public static void main(String[] args) {
         // Erstat med stien til din rigtige tekstfil, f.eks. "film.txt"
